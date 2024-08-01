@@ -177,6 +177,7 @@ if __name__ == '__main__':
 </code></pre> 
 
 ✴ In the Master side:
+
 ✴ rostopic list:
 <pre><code class="language-shell">rostopic list
 </code></pre> 
