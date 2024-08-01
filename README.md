@@ -54,9 +54,18 @@ rosdep update
 
 <details>
  <summary><ins>To start ROS as master (server):</ins></summary>
- 
+
+✴ Set the ros host ip so can clients access to it in local network:
+<pre><code class="language-shell">export ROS_HOSTNAME=MASTER_IP
+</code></pre>
+
 ✴ in new terminal:
 <pre><code class="language-shell">roscore
+</code></pre> 
+
+✴ to connect client to master in local network:
+✴ in client side:
+<pre><code class="language-shell">export ROS_MASTER_URI=http://MASTER_IP:11311
 </code></pre> 
  
 
