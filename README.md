@@ -88,10 +88,104 @@ rosdep update
 ✴ Source the Workspace:
 <pre><code class="language-shell">source ~/catkin_ws/devel/setup.bash
 </code></pre> 
- 
 
 </details>
 
+<details>
+ <summary><ins>Create ROS node:</ins></summary>
+
+✴ Navigate to the src Directory of Your Workspace:
+<pre><code class="language-shell">cd ~/catkin_ws/src
+</code></pre>
+
+✴ Create a New Package:
+<pre><code class="language-shell">catkin_create_pkg counter_tutorial std_msgs rospy roscpp
+</code></pre> 
+
+✴ Build the Workspace:
+<pre><code class="language-shell">cd ~/catkin_ws
+catkin_make
+</code></pre> 
+
+✴ Create the Node:
+✴ Navigate to the Package Directory:
+<pre><code class="language-shell">cd ~/catkin_ws/src/counter_tutorial
+</code></pre> 
+
+✴ Create a scripts Directory:
+<pre><code class="language-shell">mkdir scripts
+</code></pre> 
+
+✴ Create a Python Script:
+<pre><code class="language-shell">nano scripts/counter.py
+</code></pre> 
+
+✴ Add the Following Code to counter.py:
+<pre><code class="language-shell">
+#!/usr/bin/env python
+
+import rospy
+from std_msgs.msg import Int32
+
+def counter():
+    rospy.init_node('counter_node', anonymous=True)
+    pub = rospy.Publisher('counter', Int32, queue_size=10)
+    rate = rospy.Rate(1)  # 1 Hz
+
+    count = 0
+    while not rospy.is_shutdown():
+        rospy.loginfo(count)
+        pub.publish(count)
+        count += 1
+        rate.sleep()
+
+if __name__ == '__main__':
+    try:
+        counter()
+    except rospy.ROSInterruptException:
+        pass
+
+</code></pre> 
+
+✴ Make the Script Executable:
+<pre><code class="language-shell">chmod +x scripts/counter.py
+</code></pre> 
+
+✴ Modify the Package Configuration:
+<pre><code class="language-shell">nano CMakeLists.txt
+</code></pre> 
+
+✴ Add the Following Line to the End of the CMakeLists.txt File:
+<pre><code class="language-shell">
+ catkin_install_python(PROGRAMS scripts/counter.py
+  DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
+)
+</code></pre> 
+
+✴ Build the Package:
+<pre><code class="language-shell">
+ cd ~/catkin_ws
+ catkin_make
+</code></pre> 
+
+✴ Source the Workspace:
+<pre><code class="language-shell">source devel/setup.bash
+</code></pre> 
+
+✴ Run the Node:
+<pre><code class="language-shell">rosrun counter_tutorial counter.py
+</code></pre> 
+
+✴ In the Master side:
+✴ rostopic list:
+<pre><code class="language-shell">rostopic list
+</code></pre> 
+
+✴ Echo the Topic:
+<pre><code class="language-shell">rostopic echo /counter
+</code></pre> 
+ 
+</details>
 
 
 
