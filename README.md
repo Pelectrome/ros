@@ -108,6 +108,7 @@ catkin_make
 </code></pre> 
 
 ✴ Create the Node:
+
 ✴ Navigate to the Package Directory:
 <pre><code class="language-shell">cd ~/catkin_ws/src/counter_tutorial
 </code></pre> 
