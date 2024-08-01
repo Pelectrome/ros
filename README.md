@@ -5,22 +5,51 @@
 
 <details>
  <summary><ins>ROS installation on raspberry pi:</ins></summary>
-     
- ✴ Need to install ubuntu 20.04 LTS, install server then you can upgrade to disktop if needed
-<pre><code class="language-shell">sudo nano /etc/rc.local
+ 
+✴ Need to install ubuntu 20.04 LTS, install server then you can upgrade to disktop if needed
+ 
+✴ Setup your computer to accept software from packages.ros.org.
+<pre><code class="language-shell">sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list'
 </code></pre> 
-✴ If you want delay
-<pre><code class="language-shell">sleep 30
+ 
+✴ if you haven't already installed curl
+<pre><code class="language-shell">sudo apt install curl
 </code></pre> 
-✴ Add this to the end:(example)
-<pre><code class="language-shell">su -c "python3 /path/to/your/script.py > /path/to/your/logfile.log 2>&1" pi &
+ 
+✴ Set up your keys
+<pre><code class="language-shell">curl -s https://raw.githubusercontent.com/ros/rosdistro/master/ros.asc | sudo apt-key add -
 </code></pre> 
-✴ if you want to run chrome in kiosk mode:(example)
-<pre><code class="language-shell">su -c "/usr/bin/chromium-browser --kiosk --disable-session-crashed-bubble --disable-infobars http://localhost:5555" pi
+ 
+✴ make sure your Debian package index is up-to-date:
+<pre><code class="language-shell">sudo apt update
 </code></pre> 
-✴ Update permission:
-<pre><code class="language-shell">sudo chmod +x /etc/rc.local
+ 
+✴ Desktop-Full Install:
+<pre><code class="language-shell">sudo apt install ros-noetic-desktop-full
 </code></pre> 
+ 
+✴ Environment setup
+<pre><code class="language-shell">source /opt/ros/noetic/setup.bash
+</code></pre> 
+ 
+✴ automatically source this script every time a new shell is launched
+<pre><code class="language-shell">echo "source /opt/ros/noetic/setup.bash" >> ~/.bashrc
+source ~/.bashrc
+</code></pre>
+ 
+✴ automatically source this script every time a new shell is launched
+<pre><code class="language-shell">echo "source /opt/ros/noetic/setup.bash" >> ~/.bashrc
+source ~/.bashrc
+</code></pre>
+
+✴ Dependencies for building packages:
+<pre><code class="language-shell">sudo apt install python3-rosdep python3-rosinstall python3-rosinstall-generator python3-wstool build-essential
+</code></pre>
+
+✴ Initialize rosdep:
+<pre><code class="language-shell">sudo apt install python3-rosdep
+</code></pre>
+
 </details>
 
 
