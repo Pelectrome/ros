@@ -189,5 +189,13 @@ if __name__ == '__main__':
  
 </details>
 
+<details>
+ <summary><ins>Open RViz:</ins></summary>
+ 
+<pre><code class="language-shell">rviz
+</code></pre>
+ 
+</details>
+
 
 
