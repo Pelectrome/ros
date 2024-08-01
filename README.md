@@ -53,7 +53,7 @@ rosdep update
 </details>
 
 <details>
- <summary><ins>Create a ROS workspace::</ins></summary>
+ <summary><ins>To start ROS as master (server):</ins></summary>
 
 ✴ Set the ros host ip so can clients access to it in local network:
 <pre><code class="language-shell">export ROS_HOSTNAME=MASTER_IP
@@ -71,19 +71,22 @@ rosdep update
 </details>
 
 <details>
- <summary><ins>To start ROS as master (server):</ins></summary>
+ <summary><ins>Create a ROS workspace:</ins></summary>
 
-✴ Set the ros host ip so can clients access to it in local network:
-<pre><code class="language-shell">export ROS_HOSTNAME=MASTER_IP
+✴ Create the Workspace Directory:
+<pre><code class="language-shell">mkdir -p ~/catkin_ws/src
 </code></pre>
 
-✴ in new terminal:
-<pre><code class="language-shell">roscore
+✴ Navigate to the Workspace Directory:
+<pre><code class="language-shell">cd ~/catkin_ws/
 </code></pre> 
 
-✴ to connect client to master in local network:
-✴ in client side:
-<pre><code class="language-shell">export ROS_MASTER_URI=http://MASTER_IP:11311
+✴ Initialize the Workspace:
+<pre><code class="language-shell">catkin_make
+</code></pre> 
+
+✴ Source the Workspace:
+<pre><code class="language-shell">source ~/catkin_ws/devel/setup.bash
 </code></pre> 
  
 
