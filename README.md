@@ -121,7 +121,7 @@ catkin_make
 </code></pre> 
 
 ✴ Add the Following Code to counter.py:
-<pre><code class="language-shell">
+<pre><code class="language-python">
 #!/usr/bin/env python
 
 import rospy
