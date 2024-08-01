@@ -50,6 +50,11 @@ source ~/.bashrc
 <pre><code class="language-shell">sudo apt install python3-rosdep
 </code></pre>
 
+✴ you can initialize rosdep:
+<pre><code class="language-shell">sudo rosdep init
+rosdep update
+</code></pre>
+
 </details>
 
 
