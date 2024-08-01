@@ -4,7 +4,8 @@
 ## Raspberry pi: <img height="40px" align="right" src="https://www.vectorlogo.zone/logos/raspberrypi/raspberrypi-icon.svg" alt=""/>                          
 
 <details>
- <summary><ins>Better way to run on startup script:</ins></summary>
+ <summary><ins>ROS installation on raspberry pi:</ins></summary>
+ ✴ Need to install ubuntu 20.04 LTS, install server then you can upgrade to disktop if needed
 <pre><code class="language-shell">sudo nano /etc/rc.local
 </code></pre> 
 ✴ If you want delay
