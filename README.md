@@ -3,59 +3,7 @@
 ---
 ## Raspberry pi: <img height="40px" align="right" src="https://www.vectorlogo.zone/logos/raspberrypi/raspberrypi-icon.svg" alt=""/>                          
 
-<details>    
-<summary><ins>Globale install for opencv:</ins></summary>    
-<pre><code class="language-shell"> sudo apt install python3-opencv     
-</code></pre> 
-</details>
- <details>
- <summary><ins>venv install opencv:</ins></summary>
-<pre><code class="language-shell"> pip install --upgrade pip
-</code></pre> 
-<pre><code class="language-shell"> pip install opencv-python
-</code></pre> 
-✴ To track the process:
-<pre><code class="language-shell"> pip install opencv-python --verbose 
-</code></pre> 
-</details>
- <details>
- <summary><ins>Install pyaudio:</ins></summary>
-<pre><code class="language-shell">pip install pyaudio
-</code></pre> 
-✴ need to install portaudio19-dev:
-<pre><code class="language-shell">sudo apt install portaudio19-dev
-</code></pre> 
-✴ If you are in lite os install:
-<pre><code class="language-shell">sudo apt install pulseaudio
-</code></pre> 
-</details>
- <details>
- <summary><ins>Open audio sound:</ins></summary>
-<pre><code class="language-shell">alsamixer
-</code></pre> 
-</details>
- <details>
- <summary><ins>Copy folder from pi to pc:</ins>(example)</summary>
-<pre><code class="language-shell">scp -r pi@192.168.68.150:~/MUSICAL_DOOR_BELL /C:\Users\PC\Documents\Python\MUSICAL_DOOR_BELL_OUTDOOR
-</code></pre> 
-</details>
- <details>
- <summary><ins>Copy file from pi to pc:</ins>(example)</summary>
-<pre><code class="language-shell">scp pi@192.168.68.150:~/MUSICAL_DOOR_BELL/main.py /C:\Users\PC\Documents\Python\MUSICAL_DOOR_BELL_OUTDOOR
-</code></pre> 
- </details>
- <details>
- <summary><ins>Add you script at startup:</ins></summary>
-<pre><code class="language-shell">sudo crontab -e
-</code></pre> 
-✴ Add this to the end:(example)
-<pre><code class="language-shell">@reboot python3 /home/pi/MUSICAL_DOOR_BELL/main.py &
-</code></pre> 
-✴ If you want to add log-file:(example)
-<pre><code class="language-shell">@reboot sudo /usr/bin/python3 /home/pi/MUSICAL_DOOR_BELL/main.py > /home/pi/MUSICAL_DOOR_BELL/logfile.log 2>&1 &
-</code></pre> 
-</details>
- <details>
+
  <summary><ins>Better way to run on startup script:</ins></summary>
 <pre><code class="language-shell">sudo nano /etc/rc.local
 </code></pre> 
