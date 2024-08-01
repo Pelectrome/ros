@@ -57,5 +57,16 @@ rosdep update
 
 </details>
 
+<details>
+ <summary><ins>To start ROS as master (server):</ins></summary>
+ 
+✴ in new terminal:
+<pre><code class="language-shell">roscore
+</code></pre> 
+ 
+
+</details>
+
+
 
 
