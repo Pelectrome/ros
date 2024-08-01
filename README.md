@@ -5,6 +5,7 @@
 
 <details>
  <summary><ins>ROS installation on raspberry pi:</ins></summary>
+ 
  ✴ Need to install ubuntu 20.04 LTS, install server then you can upgrade to disktop if needed
 <pre><code class="language-shell">sudo nano /etc/rc.local
 </code></pre> 
