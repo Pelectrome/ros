@@ -194,6 +194,9 @@ if __name__ == '__main__':
  
 <pre><code class="language-shell">rviz
 </code></pre>
+
+<pre><code class="language-shell">rosrun rviz rviz
+</code></pre>
  
 </details>
 
