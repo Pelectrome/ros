@@ -72,8 +72,8 @@ rosdep update
 <pre><code class="language-shell">sudo nano /etc/hosts
 </code></pre> 
 ✴ Example:
-<pre><code class="language-shell">sudo nano /etc/hosts
-</code></pre> 192.168.1.40    raspberrypi
+<pre><code class="language-shell">192.168.1.40    raspberrypi
+</code></pre> 
  
 </details>
 
