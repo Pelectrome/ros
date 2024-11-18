@@ -67,6 +67,13 @@ rosdep update
 ✴ in client side:
 <pre><code class="language-shell">export ROS_MASTER_URI=http://MASTER_IP:11311
 </code></pre> 
+
+✴ if client could't echo the topic add the hostname ip here:
+<pre><code class="language-shell">sudo nano /etc/hosts
+</code></pre> 
+✴ Example:
+<pre><code class="language-shell">sudo nano /etc/hosts
+</code></pre> 192.168.1.40    raspberrypi
  
 </details>
 
